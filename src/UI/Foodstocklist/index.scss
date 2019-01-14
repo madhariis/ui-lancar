@@ -1,0 +1,218 @@
+@import "~@/styles/variables";
+.stock{
+    &-body{
+
+        h4 {
+            margin-bottom: 8px;
+        }
+
+        &-content{
+            display: flex;
+            margin-bottom: 20px;
+            &-image{
+                width: 30%;
+                img{
+                   width: 100%;
+                   border-radius: 4px;
+                }
+            }
+            .detail {
+                width: 70%;
+                padding: 0 5px;
+                display: flex;
+                flex-direction: column;
+
+
+                &-footer{
+                  margin-top: 5px;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+
+                  p {
+                    font-size: 10px;
+                    font-style: italic;
+                    font-weight: 300;
+                  }
+
+                  &-action {
+                    display: flex;
+                    justify-content: space-between;
+
+                    b{
+                      font-size: 13px;
+                      color: grey;
+                    }
+
+                    div{
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 5px;
+                    .btn-left{
+                        background-color: $primary;
+                        font-size: 10px;
+                        padding: 2px 5px;
+                        margin-right: 10px;
+                        border-radius: 5px;
+                    }
+                    .btn-right{
+                        background-color: $primary;
+                        font-size: 10px;
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                    }
+                    }
+                  }
+                }
+              }
+        }
+    }
+    .floating-add{
+        display: inline-block;
+        color: black;
+        position: fixed;
+        background-color: $primary;
+        padding: 10px 20px;
+        border-radius: 50%;
+        bottom: 20px;
+        left: 20px;
+        cursor: pointer;
+
+        .plus{
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 0;
+            background-color: transparent;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .popup {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            bottom: unset;
+            height: unset;
+
+            button.category {
+                margin-bottom: 5px;
+                background-color: #e25781;
+                border-radius: 50%;
+                color: white;
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+            }
+
+            button.menu {
+                margin-bottom: 5px;
+                background-color: #e25781;
+                border-radius: 50%;
+                color: white;
+                position: absolute;
+                bottom: -20px;
+                left: 60px;
+                margin-bottom: 5px;
+                background-color: #e25781;
+                border-radius: 50%;
+                color: white;
+                position: absolute;
+                bottom: -20px;
+                left: 60px;
+            }
+
+            button.upload {
+                margin-bottom: 5px;
+                background-color: #e25781;
+                border-radius: 50%;
+                color: white;
+                position: absolute;
+                bottom: -70px;
+                left: 70px;
+            }
+        }
+    }
+
+    .modal {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #0000006e;
+
+        &__wrapper {
+            background-color: white;
+            border-radius: 4px;
+            padding: 10px 16px;
+            width: 80%;
+
+            &__header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                position: relative;
+
+                .close {
+                    cursor: pointer;
+                    font-size: 20px;
+                    position: absolute;
+                    left: 0;
+                }
+
+                .title {
+                    font-weight: 700;
+                }
+            }
+
+            &__body {
+                margin-bottom: 20px;
+
+                .form-input {
+                    border: 1px solid #e0e0e0;
+                    border-radius: 2px;
+                    padding: 3px;
+                    width: 100%;
+                    background-color: transparent;
+                    margin-bottom: 5px;
+                }
+            }
+
+            &__footer {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+}
+
+.fade-enter-active {
+    animation: fade .5s;
+}
+.fade-leave-active {
+    animation: fade .5s reverse;
+}
+
+@keyframes fade {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,110 @@
+.list{
+
+    .list-wrapper{
+  
+      .category {
+  
+        &-title {
+          padding: 15px 0;
+
+          h4 {
+            font-weight: 800;
+          }
+        }
+  
+        &-menu {
+  
+          h4{
+            margin-bottom: 20px;
+          }
+  
+          &-wrapper {
+            display: flex;
+            margin-bottom: 40px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+  
+            .menu-image {
+              width: 90px;
+              height: 70px;
+              
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                object-fit: cover;
+              }
+            }
+  
+            .details {
+              width: 70%;
+              padding: 0 5px;
+              display: flex;
+              flex-direction: column;
+              
+              &-footer{
+                margin-top: 5px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+  
+                p {
+                  font-size: 10px;
+                  font-style: italic;
+                  font-weight: 300;
+                }
+  
+                &-action {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-end;
+  
+                  b{
+                    font-size: 12px;
+                  }
+  
+                  div{
+                    display: flex;
+                    div{
+                      margin: 5px;
+                    }
+                  }
+
+                  button {
+                    font-size: 10px;
+                  }
+
+                  div > button, div > span {
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .floating-menu{
+      display: flex;
+      margin: 0 auto;
+      padding: 10px 15px;
+      justify-content: space-between;
+      position:fixed;
+      bottom:0;
+      left: 0;
+      right: 0;
+      max-width: 425px;
+      background-color: white;
+      box-shadow: -1px -1px #d0d0d0;
+      margin-top: 10px;
+      i{
+        color:white;
+      }
+      .price{
+        color: #262626;
+      }
+    }    
+  }

@@ -1,0 +1,123 @@
+@import "variables";
+
+@mixin font-weight($value) {
+  @if type-of($value) == "string" {
+    @if $value == "bold" {
+      font-weight: 700;
+    }
+    @else if $value == "semibold" {
+      font-weight: 600;
+    }
+    @else if $value == "normal" {
+      font-weight: 400;
+    }
+    @else if $value == "light" {
+      font-weight: 300;
+    }
+  }
+  @else if type-of($value) == "number" {
+    font-weight: $value;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($val) {
+  -webkit-box-shadow: $val;
+  -moz-box-shadow: $val;
+  box-shadow: $val;
+}
+
+@mixin transition($prop, $time, $mode) {
+  -webkit-transition: $prop $time $mode;
+  -moz-transition: $prop $time $mode;
+  -ms-transition: $prop $time $mode;
+  -o-transition: $prop $time $mode;
+  transition: $prop $time $mode;
+}
+
+@mixin transition($shorthand) {
+  -webkit-transition: $shorthand;
+  -moz-transition: $shorthand;
+  -ms-transition: $shorthand;
+  -o-transition: $shorthand;
+  transition: $shorthand;
+}
+
+@mixin linear-gradient($direction, $color-stop1, $color-stop2) {
+  background: -webkit-linear-gradient($direction, $color-stop1, $color-stop2);
+  background: -o-linear-gradient($direction, $color-stop1, $color-stop2);
+  background: -moz-linear-gradient($direction, $color-stop1, $color-stop2);
+  background: linear-gradient($direction, $color-stop1, $color-stop2);
+}
+
+@mixin aspect-image($width: 1, $height: 1) {
+  display: block;
+  position: relative;
+  padding-bottom: ($height/$width) * 100%;
+  background-color: $placeholder;
+  overflow: hidden;
+  .image-ratio{
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    border: 0;
+  }
+}
+
+@mixin custom-placeholder($color, $font-size:"", $font-weight:"") {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+
+  }
+}
+
+@mixin breakpoint($point) {
+  // Extra small devices (portrait phones, less than 576px)
+  @if $point == portrait {
+    @media (max-width: 575px) { @content ; }
+  }
+    // Small devices (landscape phones, less than 768px)
+  @else if $point == landscape {
+    @media (max-width: 767px) { @content ; }
+  }
+  // Medium devices (tablets, less than 992px)
+  @else if $point == smart-phones {
+    @media (max-width: 767px) { @content ; }
+  }
+    // Medium devices (tablets, less than 992px)
+  @else if $point == tablets {
+    @media (max-width: 991px) { @content ; }
+  }
+    // Large devices (desktops, less than 1200px)
+  @else if $point == desktops {
+    @media (max-width: 1199px)  { @content ; }
+  }
+}

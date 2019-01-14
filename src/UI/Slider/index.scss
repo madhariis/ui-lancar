@@ -1,0 +1,52 @@
+@import "~@/styles/variables";
+.slider {
+    overflow: hidden;
+    margin: 0 -14px;
+  
+    .slider-wrapper{
+      display: flex;
+      overflow: auto;
+      padding-bottom: 30px;
+      margin-bottom: -30px;
+
+      .before, .after {
+        min-width: 14px;
+      }
+    
+      .slider-item{
+        position: relative;
+        min-width: 80%;
+        height: 150px;
+        border-radius: 2px;
+        margin-right: 5px;
+        
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 2px;
+        }
+
+        .description {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          h6 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  

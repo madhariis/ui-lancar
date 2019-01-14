@@ -1,0 +1,56 @@
+@import '~@/styles/variables';
+.waiterlist-wrapper{
+   .waiterlist-header{
+    display: flex;
+    justify-content: space-between;
+    }
+    .waiterlist-body{
+        margin: 20px 10px;
+        .waiter-table{
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            background-color: $primary;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .waiter-list{
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .title{
+                padding: 5px;
+            }
+            .status{
+              justify-self: center;
+            }
+            .spiner{
+                display: flex;
+                grid-column-start: 2;
+                .qty{
+                    align-self: center;
+                    padding: 5px;
+                }
+            }
+            .arrow{
+                justify-self: center;
+                background-color: white;
+            }
+        }
+    }
+    .manage{
+        text-align: center;
+        margin: auto;
+        padding: 10px 15px;
+        padding-top: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 425px;
+        button{
+            width: 100%;
+        }
+    }
+}

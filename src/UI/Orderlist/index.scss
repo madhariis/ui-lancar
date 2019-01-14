@@ -1,0 +1,140 @@
+@import "~@/styles/variables";
+.list-wrapper{
+    height: 100%;
+
+    .list {
+        position: fixed;
+        top: 0;
+        display: flex;
+        position: relative;
+        align-items: center;
+        padding: 8px;
+        .center {
+            margin:auto;
+        font-size: 20px;
+        }
+    }
+    .order-body{
+            &-header{
+                font-size: 17px;
+                font-weight: bold;
+                margin: 10px;
+            }
+            .line{
+                width: 100%;
+                height: 1px;
+                background-color: black;
+            }
+            &-item{
+                padding: 10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: start;
+
+            &-price{
+                justify-self: end;
+            }
+            &-description{
+                font-style: italic;
+                padding-top: 10px;
+                font-size: 11px;
+            }
+            &-spinner{
+                display: flex;
+                justify-self: end;
+                padding-top: 10px;
+                span{
+                    align-self: center;
+                    padding: 5px;
+                }
+            }
+        }
+
+    .addmore{
+        text-align: center;
+        margin: 20px;
+        button{
+            width: 100%;
+        }
+    }
+    .order-foot{
+        margin: 10px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .order-footer{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+        &-title{
+
+        }
+        &-price{
+            justify-self: end;
+        }
+    }
+.order-footer-wrapper{
+    margin: 10px;
+    .total{
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &-price{
+            justify-self: end;
+        }
+    }
+    .tax{
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &-price{
+            justify-self: end;
+        }
+    }
+    .discount{
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &-price{
+            justify-self: end;
+        }
+    }
+    .gtotal{
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+        &-price{
+            justify-self: end;
+        }
+    }
+}
+    .order-foot-text{
+        font-size: 10px;
+        font-style: italic;
+        padding: 10px;
+    }
+}
+    .confirm{
+        text-align: center;
+        display: flex;
+        margin: auto;
+        padding: 10px 15px;
+        padding-top: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 425px;
+
+        button{
+            width: 100%;
+
+            &:disabled {
+                cursor: no-drop;
+                background-color: gray;
+            }
+        }
+    }
+}

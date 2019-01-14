@@ -1,0 +1,33 @@
+@import '~@/styles/variables';
+.waiterlist-wrapper{
+   .waiterlist-header{
+    display: flex;
+    justify-content: space-between;
+    }
+    .waiterlist-body{
+        margin: 20px 10px;
+        .waiter-table{
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            background-color: $primary;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .waiter-list{
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .title{
+                justify-self: end;
+                padding: 5px;
+            }
+            .serve{
+                display: flex;
+                cursor: pointer;
+                justify-self: end;
+            }
+        }
+    }
+}
