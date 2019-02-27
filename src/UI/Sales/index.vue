@@ -4,6 +4,7 @@
             Sales
         </div>
         <div class="sales-content">
+          Start date
           <v-date-picker
             v-model="start"
             :formats='formats'
@@ -12,6 +13,7 @@
           </v-date-picker>
         </div>
         <div class="sales-content">
+          End date
           <v-date-picker
             v-model="end"
             :formats='formats'
